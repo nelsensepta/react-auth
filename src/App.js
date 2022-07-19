@@ -3,10 +3,10 @@ import "./App.css";
 function App() {
   return (
     <div className="min-h-screen flex justify-center items-center flex-col">
-      <div className="flex justify-center items-center bg-blue-200 p-10 rounded-xl">
-        <form className="w-full">
-          <h1 className="text-center text-3xl mb-3">Login</h1>
-          <div className="mb-8">
+      <div className="flex justify-center items-center bg-blue-200 py-12 px-20 rounded-xl flex-col">
+        <h1 className="text-center text-3xl mb-3">Login</h1>
+        <form className="mt-2 min-w-[390px]">
+          <div className="mb-8 w-full">
             <label
               for="email"
               className="block mb-2 text-base font-medium text-gray-600"
@@ -36,7 +36,7 @@ function App() {
             />
           </div>
           <div className="flex items-start mb-8">
-            <div className="flex items-center h-5">
+            <div className="flex justify-center items-center h-5">
               <input
                 id="remember"
                 type="checkbox"
@@ -59,6 +59,12 @@ function App() {
             Submit
           </button>
         </form>
+        <div className="flex justify-center items-center flex-col gap-2">
+          <span className="text-sm mt-8 text-gray-600">Lupa password ?</span>
+          <span className="text-sm text-gray-600">
+            Belum punya akun ? <span className="text-blue-700">Register</span>
+          </span>
+        </div>
       </div>
     </div>
   );
