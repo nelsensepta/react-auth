@@ -65,7 +65,7 @@ const Login = () => {
           <span className="text-sm text-gray-600">
             Belum punya akun ?
             <span className="text-blue-700">
-              <Link to="/register">Register</Link>
+              <Link to="/register"> Register</Link>
             </span>
           </span>
         </div>

@@ -68,7 +68,7 @@ export default function Register() {
           <span className="text-sm text-gray-600">
             Sudah Punya Akun ?
             <span className="text-blue-700">
-              <Link to="/">Login</Link>
+              <Link to="/"> Login</Link>
             </span>
           </span>
         </div>
