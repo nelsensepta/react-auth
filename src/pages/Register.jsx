@@ -17,7 +17,7 @@ export default function Register() {
         <form className="mt-2 min-w-[390px]" onSubmit={handleSubmit(onSubmit)}>
           <div className="mb-8 w-full">
             <label
-              for="username"
+              htmlFor="username"
               className="block mb-2 text-base font-medium text-gray-600"
             >
               Username
@@ -38,7 +38,7 @@ export default function Register() {
           </div>
           <div className="mb-8 w-full">
             <label
-              for="email"
+              htmlFor="email"
               className="block mb-2 text-base font-medium text-gray-600"
             >
               Email
@@ -60,7 +60,7 @@ export default function Register() {
           </div>
           <div className="mb-8">
             <label
-              for="password"
+              htmlFor="password"
               className="block mb-2 text-base font-medium text-gray-600"
             >
               Password

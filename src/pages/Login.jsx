@@ -32,7 +32,7 @@ const Login = () => {
           >
             <div className="mb-8">
               <label
-                forhtml="email"
+                htmlFor="email"
                 className="block mb-2 text-base font-medium text-gray-600"
               >
                 Email
@@ -54,7 +54,7 @@ const Login = () => {
             </div>
             <div className="mb-8">
               <label
-                forhtml="password"
+                htmlFor="password"
                 className="block mb-2 text-base font-medium text-gray-600"
               >
                 Password
@@ -84,7 +84,7 @@ const Login = () => {
                 />
               </div>
               <label
-                forhtml="remember"
+                htmlFor="remember"
                 className="ml-2 text-base font-medium text-gray-600"
               >
                 Remember me
