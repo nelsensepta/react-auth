@@ -87,8 +87,7 @@ export default function Register() {
           </button>
         </form>
         <div className="flex justify-center items-center flex-col gap-2">
-          <span className="text-sm mt-8 text-gray-600">Lupa password ?</span>
-          <span className="text-sm text-gray-600">
+          <span className="text-sm text-gray-600 mt-8">
             Sudah Punya Akun ?
             <span className="text-blue-700">
               <Link to="/"> Login</Link>
