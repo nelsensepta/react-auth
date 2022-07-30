@@ -9,7 +9,7 @@ const Login = () => {
         <form className="mt-2 min-w-[390px]">
           <div className="mb-8 w-full">
             <label
-              for="email"
+              forhtml="email"
               className="block mb-2 text-base font-medium text-gray-600"
             >
               Email
@@ -24,7 +24,7 @@ const Login = () => {
           </div>
           <div className="mb-8">
             <label
-              for="password"
+              forhtml="password"
               className="block mb-2 text-base font-medium text-gray-600"
             >
               Password
@@ -47,7 +47,7 @@ const Login = () => {
               />
             </div>
             <label
-              for="remember"
+              forhtml="remember"
               className="ml-2 text-base font-medium text-gray-600"
             >
               Remember me

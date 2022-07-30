@@ -25,8 +25,16 @@ export default function Register() {
             <input
               type="text"
               id="text"
-              className="bg-gray-50 border border-gray-300 focus:border-blue-400 text-base rounded-xl focus:ring-offset-2 focus:ring-blue-300 focus:outline-none focus:ring-2 block w-full p-2.5"
+              {...register("username", { required: true })}
+              className={`bg-gray-50 border border-gray-300  text-base rounded-xl focus:ring-offset-2 focus:outline-none focus:ring-2 block w-full p-2.5 ${
+                errors.username
+                  ? "focus:border-red-400 focus:ring-red-500"
+                  : "focus:border-blue-400 focus:ring-blue-500"
+              }`}
             />
+            <p className="text-red-500 text-xs mt-1">
+              {errors.username?.type === "required" && "First name is required"}
+            </p>
           </div>
           <div className="mb-8 w-full">
             <label
@@ -36,11 +44,19 @@ export default function Register() {
               Email
             </label>
             <input
+              {...register("email", { required: true })}
               type="email"
               id="email"
-              className="bg-gray-50 border border-gray-300 focus:border-blue-400 text-base rounded-xl focus:ring-offset-2 focus:ring-blue-300 focus:outline-none focus:ring-2 block w-full p-2.5"
+              className={`bg-gray-50 border border-gray-300  text-base rounded-xl focus:ring-offset-2 focus:outline-none focus:ring-2 block w-full p-2.5 ${
+                errors.email
+                  ? "focus:border-red-400 focus:ring-red-500"
+                  : "focus:border-blue-400 focus:ring-blue-500"
+              }`}
               placeholder="email@email.com"
             />
+            <p className="text-red-500 text-xs mt-1.5">
+              {errors.email?.type === "required" && "Email is required"}
+            </p>
           </div>
           <div className="mb-8">
             <label
@@ -50,11 +66,18 @@ export default function Register() {
               Password
             </label>
             <input
+              {...register("password", { required: true })}
               type="password"
               id="password"
-              className="bg-gray-50 border border-gray-300 focus:border-blue-400 text-base rounded-xl focus:ring-offset-2 focus:ring-blue-300 focus:outline-none focus:ring-2 block w-full p-2.5"
-              required=""
+              className={`bg-gray-50 border border-gray-300  text-base rounded-xl focus:ring-offset-2 focus:outline-none focus:ring-2 block w-full p-2.5 ${
+                errors.password
+                  ? "focus:border-red-400 focus:ring-red-500"
+                  : "focus:border-blue-400 focus:ring-blue-500"
+              }`}
             />
+            <p className="text-red-500 text-sm mt-1">
+              {errors.password?.type === "required" && "Password is Required"}
+            </p>
           </div>
           <button
             type="submit"
