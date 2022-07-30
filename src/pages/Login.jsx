@@ -30,7 +30,7 @@ const Login = () => {
             className="mt-2 min-w-[390px]"
             onSubmit={handleSubmit(onSubmit)}
           >
-            <div className="mb-8 w-full">
+            <div className="mb-8">
               <label
                 forhtml="email"
                 className="block mb-2 text-base font-medium text-gray-600"
@@ -41,7 +41,7 @@ const Login = () => {
                 type="email"
                 id="email"
                 {...register("email", { required: true })}
-                className={`bg-gray-50 border border-gray-300  text-base rounded-xl focus:ring-offset-2 focus:outline-none focus:ring-2 block w-full p-2.5 ${
+                className={`bg-gray-50 border border-gray-300 text-base rounded-xl focus:ring-offset-2 focus:outline-none focus:ring-2 block w-full p-2.5 ${
                   errors.email
                     ? "focus:border-red-400 focus:ring-red-500"
                     : "focus:border-blue-400 focus:ring-blue-500"
