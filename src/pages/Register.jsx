@@ -17,14 +17,14 @@ export default function Register() {
         <form className="mt-2 min-w-[390px]" onSubmit={handleSubmit(onSubmit)}>
           <div className="mb-8 w-full">
             <label
-              for="text"
+              for="username"
               className="block mb-2 text-base font-medium text-gray-600"
             >
               Username
             </label>
             <input
               type="text"
-              id="text"
+              id="username"
               {...register("username", { required: true })}
               className={`bg-gray-50 border border-gray-300  text-base rounded-xl focus:ring-offset-2 focus:outline-none focus:ring-2 block w-full p-2.5 ${
                 errors.username
@@ -32,7 +32,7 @@ export default function Register() {
                   : "focus:border-blue-400 focus:ring-blue-500"
               }`}
             />
-            <p className="text-red-500 text-xs mt-1">
+            <p className="text-red-500 text-sm mt-1.5">
               {errors.username?.type === "required" && "First name is required"}
             </p>
           </div>
@@ -54,7 +54,7 @@ export default function Register() {
               }`}
               placeholder="email@email.com"
             />
-            <p className="text-red-500 text-xs mt-1.5">
+            <p className="text-red-500 text-sm mt-1.5">
               {errors.email?.type === "required" && "Email is required"}
             </p>
           </div>
@@ -75,7 +75,7 @@ export default function Register() {
                   : "focus:border-blue-400 focus:ring-blue-500"
               }`}
             />
-            <p className="text-red-500 text-sm mt-1">
+            <p className="text-red-500 text-sm mt-1.5">
               {errors.password?.type === "required" && "Password is Required"}
             </p>
           </div>

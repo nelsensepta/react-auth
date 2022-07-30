@@ -1,12 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useForm } from "react-hook-form";
 
 const Login = () => {
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm();
+  const onSubmit = (data) => console.log(data);
   return (
     <div className="min-h-screen flex justify-center items-center flex-col">
       <div className="flex justify-center items-center bg-blue-200 py-12 px-20 rounded-xl flex-col">
         <h1 className="text-center text-3xl mb-3">Login</h1>
-        <form className="mt-2 min-w-[390px]">
+        <form className="mt-2 min-w-[390px]" onSubmit={handleSubmit(onSubmit)}>
           <div className="mb-8 w-full">
             <label
               forhtml="email"
@@ -17,10 +25,17 @@ const Login = () => {
             <input
               type="email"
               id="email"
-              className="bg-gray-50 border border-gray-300 focus:border-blue-400 text-base rounded-xl focus:ring-offset-2 focus:ring-blue-300 focus:outline-none focus:ring-2 block w-full p-2.5"
+              {...register("email", { required: true })}
+              className={`bg-gray-50 border border-gray-300  text-base rounded-xl focus:ring-offset-2 focus:outline-none focus:ring-2 block w-full p-2.5 ${
+                errors.email
+                  ? "focus:border-red-400 focus:ring-red-500"
+                  : "focus:border-blue-400 focus:ring-blue-500"
+              }`}
               placeholder="email@email.com"
-              required=""
             />
+            <p className="text-red-500 text-sm mt-1.5">
+              {errors.email?.type === "required" && "Email is required"}
+            </p>
           </div>
           <div className="mb-8">
             <label
@@ -32,9 +47,16 @@ const Login = () => {
             <input
               type="password"
               id="password"
-              className="bg-gray-50 border border-gray-300 focus:border-blue-400 text-base rounded-xl focus:ring-offset-2 focus:ring-blue-300 focus:outline-none focus:ring-2 block w-full p-2.5"
-              required=""
+              {...register("password", { required: true })}
+              className={`bg-gray-50 border border-gray-300  text-base rounded-xl focus:ring-offset-2 focus:outline-none focus:ring-2 block w-full p-2.5 ${
+                errors.password
+                  ? "focus:border-red-400 focus:ring-red-500"
+                  : "focus:border-blue-400 focus:ring-blue-500"
+              }`}
             />
+            <p className="text-red-500 text-sm mt-1.5">
+              {errors.password?.type === "required" && "Password is required"}
+            </p>
           </div>
           <div className="flex items-start mb-8">
             <div className="flex justify-center items-center h-5">
