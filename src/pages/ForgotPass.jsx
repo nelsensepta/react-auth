@@ -25,7 +25,7 @@ const ForgotPass = () => {
                 htmlFor="password"
                 className="block mb-2 text-base font-medium text-gray-600"
               >
-                Password
+                New Password
               </label>
               <input
                 type="password"
@@ -46,7 +46,7 @@ const ForgotPass = () => {
                 htmlFor="repeatPass"
                 className="block mb-2 text-base font-medium text-gray-600"
               >
-                Repeat Password
+                New Repeat Password
               </label>
               <input
                 type="text"
