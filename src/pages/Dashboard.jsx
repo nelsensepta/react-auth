@@ -1,10 +1,13 @@
 import React from "react";
+import Table from "../components/Table";
 
 const Dashboard = () => {
   return (
-    <div className="min-h-screen flex justify-center items-center bg-gray-200">
-      <h1>Dashboard</h1>
-      <p>Contoh Dashboard</p>
+    <div className="min-h-screen flex flex-col mt-32">
+      <h1 className="text-center text-3xl mb-4">Dashboard</h1>
+      <div className="w-full">
+        <Table />
+      </div>
     </div>
   );
 };
