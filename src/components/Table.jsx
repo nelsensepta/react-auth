@@ -24,7 +24,7 @@ const Table = () => {
           <input
             type="text"
             id="table-search"
-            className="block p-2 pl-10 w-80 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 "
+            className="mt-1 block p-2 pl-10 w-80 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 "
             placeholder="Search for items"
           />
         </div>
@@ -56,7 +56,7 @@ const Table = () => {
             <th scope="col" className="py-3 px-6">
               Price
             </th>
-            <th scope="col" className="py-3 px-6">
+            <th scope="col" className="py-3 px-6 text-center">
               Action
             </th>
           </tr>
@@ -84,9 +84,12 @@ const Table = () => {
             <td className="py-4 px-6">Sliver</td>
             <td className="py-4 px-6">Laptop</td>
             <td className="py-4 px-6">$2999</td>
-            <td className="py-4 px-6">
+            <td className="py-4 px-6 flex justify-center items-center gap-5">
               <button className="font-medium text-blue-600  hover:underline">
                 Edit
+              </button>
+              <button className="font-medium text-blue-600  hover:underline">
+                Hapus
               </button>
             </td>
           </tr>
